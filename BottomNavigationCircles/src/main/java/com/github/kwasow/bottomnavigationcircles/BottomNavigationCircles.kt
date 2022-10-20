@@ -182,7 +182,7 @@ class BottomNavigationCircles : BottomNavigationView {
     }
 
     private fun updateEnabledColor() {
-        enabledColor = if (darkIcon) Color.BLACK else Color.WHITE
+     //   enabledColor = if (darkIcon) Color.BLACK else Color.WHITE
     }
 
     private fun animateBottomIcon(itemId: Int): Boolean {
