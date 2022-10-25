@@ -201,7 +201,7 @@ class BottomNavigationCircles : BottomNavigationView {
                 val currentView = getAppCompatImageView(currentItemView)
                 val oldCircle = rootLayout.findViewById<ImageView>(currentCircleId)
 
-                currentView.drawable.setTint(Color.BLACK)
+              //  currentView.drawable.setTint(Color.BLACK)
 
                 animatorSet.playTogether(
                     buildTranslateIconAnimator(currentView, -(height / 4).toFloat(), 0f),
