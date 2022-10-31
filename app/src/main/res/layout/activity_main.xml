@@ -13,6 +13,7 @@
             android:layout_height="?attr/actionBarSize"
             android:layout_alignParentBottom="true"
             app:itemIconSize="30dp"
+            app:backgroundTint="@color/black"
             app:menu="@menu/menu_bottom_navigation_bar"/>
 
 

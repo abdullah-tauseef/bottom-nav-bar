@@ -201,12 +201,12 @@ class BottomNavigationCircles : BottomNavigationView {
                 val currentView = getAppCompatImageView(currentItemView)
                 val oldCircle = rootLayout.findViewById<ImageView>(currentCircleId)
 
-                currentView.drawable.setTint(Color.BLACK)
+               // currentView.drawable.setTint(Color.BLACK)
 
                 animatorSet.playTogether(
                     buildTranslateIconAnimator(currentView, -(height / 4).toFloat(), 0f),
                     buildTranslateCircleAnimator(oldCircle, -(height / 4).toFloat(), 0f),
-                    buildTintAnimator(currentView, enabledColor, disabledColor)
+                 //   buildTintAnimator(currentView, enabledColor, disabledColor)
                 )
                 oldCircle.animate()
                     .alpha(0F)
@@ -237,7 +237,7 @@ class BottomNavigationCircles : BottomNavigationView {
             animatorSet.playTogether(
                 buildTranslateIconAnimator(icon, 0f, -(height / 4).toFloat()),
                 buildTranslateCircleAnimator(circleView, 0f, -(height / 4).toFloat()),
-                buildTintAnimator(icon, disabledColor, enabledColor)
+              //  buildTintAnimator(icon, disabledColor, enabledColor)
             )
 
             circleView.animate()
@@ -319,7 +319,7 @@ class BottomNavigationCircles : BottomNavigationView {
             circleView.setImageDrawable(backgroundShapeDrawable)
         } else {
             val drawable = ContextCompat.getDrawable(context, customBackgroundDrawable)
-            drawable?.setTint(circleColor)
+          //  drawable?.setTint(circleColor)
             circleView.setImageDrawable(drawable)
         }
 
