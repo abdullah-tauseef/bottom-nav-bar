@@ -34,7 +34,7 @@ class BottomNavigationCircles : BottomNavigationView {
     private lateinit var rootLayout: RelativeLayout
     private var disabledColor =
         ContextCompat.getColor(context, R.color.material_on_surface_emphasis_medium)
-    private var enabledColor = Color.WHITE
+    private var enabledColor = Color.TRANSPARENT
     private var textColor by Delegates.notNull<Int>()
 
     var backgroundShape = Shape.Circle
