@@ -237,7 +237,7 @@ class BottomNavigationCircles : BottomNavigationView {
             animatorSet.playTogether(
                 buildTranslateIconAnimator(icon, 0f, -(height / 4).toFloat()),
                 buildTranslateCircleAnimator(circleView, 0f, -(height / 4).toFloat()),
-              //  buildTintAnimator(icon, disabledColor, enabledColor)
+                buildTintAnimator(icon, disabledColor, enabledColor)
             )
 
             circleView.animate()
