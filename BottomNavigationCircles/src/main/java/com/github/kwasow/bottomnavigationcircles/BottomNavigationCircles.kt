@@ -206,10 +206,9 @@ class BottomNavigationCircles : BottomNavigationView {
                 animatorSet.playTogether(
                     buildTranslateIconAnimator(currentView, -(height / 4).toFloat(), 0f),
                     buildTranslateCircleAnimator(oldCircle, -(height / 4).toFloat(), 0f),
-                 //   buildTintAnimator(currentView, enabledColor, disabledColor)
+                    buildTintAnimator(currentView, enabledColor, disabledColor)
                 )
                 oldCircle.animate()
-                    .alpha(0F)
                     .duration = 500
 
                 GlobalScope.launch {
