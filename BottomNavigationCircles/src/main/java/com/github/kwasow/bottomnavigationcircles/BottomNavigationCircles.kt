@@ -209,6 +209,7 @@ class BottomNavigationCircles : BottomNavigationView {
                     buildTintAnimator(currentView, enabledColor, disabledColor)
                 )
                 oldCircle.animate()
+                    .alpha(1F)
                     .duration = 500
 
                 GlobalScope.launch {
