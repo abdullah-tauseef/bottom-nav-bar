@@ -32,9 +32,9 @@ class BottomNavigationCircles : BottomNavigationView {
     private val menuViewGroupId = View.generateViewId()
 
     private lateinit var rootLayout: RelativeLayout
-    private var disabledColor =
-        ContextCompat.getColor(context, R.color.material_on_surface_emphasis_medium)
-    private var enabledColor = Color.TRANSPARENT
+    private var disabledColor =ContextCompat.getColor(context, R.color.material_on_surface_emphasis_medium)
+        //
+    private var enabledColor = Color.WHITE
     private var textColor by Delegates.notNull<Int>()
 
     var backgroundShape = Shape.Circle
@@ -206,7 +206,7 @@ class BottomNavigationCircles : BottomNavigationView {
                 animatorSet.playTogether(
                     buildTranslateIconAnimator(currentView, -(height / 4).toFloat(), 0f),
                     buildTranslateCircleAnimator(oldCircle, -(height / 4).toFloat(), 0f),
-                    buildTintAnimator(currentView, enabledColor, disabledColor)
+                    buildTintAnimator(currentView, 0,Color.BLUE)
                 )
                 oldCircle.animate()
                     .alpha(1F)
@@ -237,7 +237,7 @@ class BottomNavigationCircles : BottomNavigationView {
             animatorSet.playTogether(
                 buildTranslateIconAnimator(icon, 0f, -(height / 4).toFloat()),
                 buildTranslateCircleAnimator(circleView, 0f, -(height / 4).toFloat()),
-                buildTintAnimator(icon, disabledColor, enabledColor)
+                buildTintAnimator(icon,  0,enabledColor)
             )
 
             circleView.animate()
