@@ -5,9 +5,11 @@ import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.content.Context
 import android.graphics.Color
+
 import android.graphics.Typeface
 import android.util.AttributeSet
 import android.view.View
+
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RelativeLayout
@@ -92,8 +94,8 @@ class BottomNavigationCircles : BottomNavigationView {
         ).apply {
             try {
                 color = getInteger(
-                    R.styleable.BottomNavigationCircles_circleColor,
-                    ContextCompat.getColor(context, R.color.design_default_color_primary)
+                    R.styleable.BottomNavigationCircles_circleColor,Color.parseColor("#2754D6")
+
                 )
                 darkIcon = getBoolean(
                     R.styleable.BottomNavigationCircles_darkIcon,
@@ -206,7 +208,7 @@ class BottomNavigationCircles : BottomNavigationView {
                 animatorSet.playTogether(
                     buildTranslateIconAnimator(currentView, -(height / 4).toFloat(), 0f),
                     buildTranslateCircleAnimator(oldCircle, -(height / 4).toFloat(), 0f),
-                    buildTintAnimator(currentView, 0,Color.parseColor("#0957DF"))
+                    buildTintAnimator(currentView, 0,Color.parseColor("#2754D6"))
                 )
                 oldCircle.animate()
                     .alpha(1F)
