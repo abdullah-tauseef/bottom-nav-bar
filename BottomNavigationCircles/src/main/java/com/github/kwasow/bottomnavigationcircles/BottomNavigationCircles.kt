@@ -37,11 +37,12 @@ class BottomNavigationCircles : BottomNavigationView {
     private var disabledColor =ContextCompat.getColor(context, R.color.material_on_surface_emphasis_medium)
         //
     private var enabledColor = Color.WHITE
-    private var textColor by Delegates.notNull<Int>()
+    private var textColor =Color.parseColor("#2754D6")
 
     var backgroundShape = Shape.Circle
     private var customBackgroundDrawable = -1
     var circleColor = Color.BLUE
+
     var darkIcon = false
         set(value) {
             field = value
@@ -272,7 +273,7 @@ class BottomNavigationCircles : BottomNavigationView {
 
     private fun setSubTextStyle(textView: TextView) {
         textView.setTypeface(textView.typeface, Typeface.BOLD)
-        textView.setTextColor(textColor)
+        textView.setTextColor(Color.parseColor("#2754D6"))
     }
 
     private fun buildTranslateIconAnimator(currentView: View, from: Float, to: Float):
